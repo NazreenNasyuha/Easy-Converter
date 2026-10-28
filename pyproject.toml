@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easy-converter"
+version = "1.1.0"
+description = "Zero-Click Shift-Drag Radial File Converter for Windows 11"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "PySide6>=6.6.0",
+    "Pillow>=10.2.0",
+    "pillow-heif>=0.15.0",
+    "PyMuPDF>=1.23.0",
+    "imageio-ffmpeg>=0.4.9",
+    "pywin32>=306",
+    "python-docx>=1.1.0",
+    "python-pptx>=0.6.23",
+    "openpyxl>=3.1.2",
+    "ezdxf>=1.1.0",
+]
+
+[project.scripts]
+easy-converter = "main:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
